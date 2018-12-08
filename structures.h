@@ -11,5 +11,5 @@ struct City {
 
 struct NodeElasticNet {
 
-	char nodeofnet = '*';
+	char nodeofnet = 3;
 };
