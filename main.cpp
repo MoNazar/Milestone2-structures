@@ -25,9 +25,11 @@ int main() {
 	int c = EN.count_cities();
 	EN.make_circle(radius, c, cv_ratio1);
 	EN.print_map();
+	printf("\n");
+	EN.getpositioncity();
+	printf("\n");
 	system("pause");
 	return 0;
 };
 
 
-/* Implementiere einen Kreis mit radius r, und platziere Anzahl_Städte Knoten äquidistanz auf Kreis.*/
