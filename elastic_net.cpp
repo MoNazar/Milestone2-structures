@@ -1,7 +1,13 @@
 #include "elastic_net.h"
 #include "structures.h"
 char map2[size1][size1];
-City stadt1;
+City node;
+NodeElasticNet nodeofelasticnet;
+
+// vector of positions, where cities has been setted
+typedef::vector <tuple<int, int> > tuple_list;
+tuple_list t1; // t1 = vector of tuples
+
 void elastic_net::initialize_map() {
 	int i, j; 
 	for (i = 0; i < size1; i++) {
@@ -90,11 +96,27 @@ void elastic_net::make_circle(int r, int number_of_cities, float cv_ratio) {
 		int y = (int)(koordinate1 + (r*cos(alpha)));
 		int x = (int)(koordinate2 + (r* sin(alpha)));
 		//map[y][x] = 3;
-		map2[y][x] = 3;
+		map2[y][x] = nodeofelasticnet.nodeofnet;
 		alpha += (2 * 3.14159265) / number_of_vertices;
 		
 	}
 	
 }
-// Nächster Schritt : 
-/* Implementiere einen Kreis mit radius r, und platziere Anzahl_Städte Knoten äquidistanz auf Kreis.*/
+
+void elastic_net::gepositioncity() {
+	int i, j;
+	//typedef::vector <tuple<int, int> > tuple_list;
+	//tuple_list t1;
+	for (i = 0; i < size1; i++) {
+		for (j = 0; j < size1; j++) {
+			if (map2[i][j] == 1) {
+				t1.push_back(tuple<int, int>(i, j));
+			}
+		}
+	}
+	// iterating trough all cities
+	//for (tuple_list::const_iterator g = t1.begin(); g != t1.end(); g++) {
+		// returns positions of city 
+		//cout << get<0>(*g) << " " << get<1>(*g) << endl;		
+	}
+}
