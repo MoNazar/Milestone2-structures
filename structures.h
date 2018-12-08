@@ -3,13 +3,13 @@
 #pragma once
 #include <iostream>
 
+
 struct City {
 
-	int x; // koordinate x 
-	int y; // koordinate y 
+	char nodeofcity = 1; // Nur fürs erste. Weiter verbesserungen möglich
 };
 
 struct NodeElasticNet {
 
-	char node = '*';
+	char nodeofnet = '*';
 };
