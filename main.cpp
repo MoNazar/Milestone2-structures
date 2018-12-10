@@ -28,6 +28,7 @@ int main() {
 	printf("\n");
 	EN.getpositioncity();
 	printf("\n");
+	EN.getposition_of_circle_node();
 	system("pause");
 	return 0;
 };
