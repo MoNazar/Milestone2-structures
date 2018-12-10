@@ -16,4 +16,5 @@ public:
 	void make_circle(int r, int number_of_cities, float cv_ratio);
 	int count_cities();
 	void getpositioncity();
+	void getposition_of_circle_node();
 };
