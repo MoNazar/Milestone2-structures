@@ -120,3 +120,20 @@ void elastic_net::gepositioncity() {
 		//cout << get<0>(*g) << " " << get<1>(*g) << endl;		
 	}
 }
+
+void elastic_net::getposition_of_circle_node() {
+	int i, j;
+	for (i = 0; i < size1; i++) {
+		for (j = 0; j < size1; j++) {
+			if (map2[i][j] == 3) {
+				t2.push_back(tuple<int, int>(i, j));
+			}
+		}
+	}
+	// iterating trough all nodes ofcircle
+	for (tuple_list::const_iterator g = t2.begin(); g != t2.end(); g++) {
+		// returns positions of city 
+		cout << get<0>(*g) << " " << get<1>(*g) << endl;
+		
+	}	
+}
